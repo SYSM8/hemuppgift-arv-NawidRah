@@ -8,27 +8,20 @@ namespace Hemuppgift_Arv_Temp.Game
 {
     public abstract class Player
     {
+        protected string userId;
 
-        public string userID;
-
-        public Player(string UserID)
+        public Player(string id) //Detta är basen för användarnamnet (UserID)
         {
-            userID = UserID;
-
+            userId = id;
         }
 
-
-        public void getUserID()
+        public string getUserId()
         {
-            Console.WriteLine($"UserID: {userID}");
+            return userId;
         }
 
-        public virtual void takePins(Board board)
-        {
-            Console.WriteLine($"Taking {board.takePinsNo} from the board");
-        }
-
-
-
+        // Detta är en abstrakt metod som används för att implementeras i andra klasser. På så sätt har vi en bas som kan användas i blandannat HumanPlayer och ComputerPlayer.
+        public abstract int takePins(Board board);
     }
+
 }

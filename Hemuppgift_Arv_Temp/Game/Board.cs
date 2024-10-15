@@ -8,44 +8,20 @@ namespace Hemuppgift_Arv_Temp.Game
 {
     public class Board
     {
+        private int noPins;
 
-
-        public int pinCount;
-
-        public int setUpNo;
-
-        public int takePinsNo;
-        private void noPins(int PinCount)
+       
+        public void setUp(int pins)
         {
-
-            PinCount = pinCount;
-
+            noPins = pins;
         }
-        
-
-        public void setUp(int SetUpNo)
+        public void takePins(int pins)
         {
-           
-
-            SetUpNo += pinCount;
-
+            noPins -= pins;
         }
-
-        public void takePins(int TakePinsNo)
+        public int getNoPins()
         {
-           
-
-           TakePinsNo -= pinCount;
+            return noPins;
         }
-
-        public void getNoPins()
-        {
-            Console.WriteLine($"Number of pins are: {pinCount}");
-        }
-
-
-        
-
-        
     }
 }
