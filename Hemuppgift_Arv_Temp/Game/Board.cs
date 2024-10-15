@@ -11,15 +11,15 @@ namespace Hemuppgift_Arv_Temp.Game
         private int noPins;
 
        
-        public void setUp(int pins)
+        public void setUp(int pins) //Denna visar hur många pinnar programmet ska ha, brukar vara 10!
         {
             noPins = pins;
         }
-        public void takePins(int pins)
+        public void takePins(int pins) //Detta är koden som tar bort respektive pinnar
         {
             noPins -= pins;
         }
-        public int getNoPins()
+        public int getNoPins() //Få antalet pinnar.
         {
             return noPins;
         }
